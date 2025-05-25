@@ -17,7 +17,8 @@ GTreasury.CodeAssessment/
 - Input validation and error handling
 - API-first design and clean architecture (SOLID)
 - Responsive UI with form inputs and results table
-- Unit tested backend services
+- Line and Bar graph for visual representation
+- Unit tested backend services & UI components
 
 ---
 
@@ -26,13 +27,12 @@ GTreasury.CodeAssessment/
 ### Backend (.NET)
 - ASP.NET Core Web API
 - C# (.NET 8)
-- Entity Framework Core (in-memory)
 - xUnit + Moq for unit testing
 
 ### Frontend (Angular)
 - Angular CLI (v19)
 - RxJS and reactive forms
-- Chart.js (optional - for NPV visualization)
+- Chart.js (for NPV visualization)
 - TypeScript, SCSS
 
 ### Additional Notes
@@ -40,12 +40,6 @@ I've fixed all the linting issues in the Angular project, except for the ones re
 ---
 
 ## Getting Started
-
-### Prerequisites
-- [.NET SDK 8](https://dotnet.microsoft.com/en-us/download)
-- [Node.js & npm](https://nodejs.org/) (v16+ recommended)
-- [Angular CLI](https://angular.io/cli)
-
 ---
 ### Run the UI
 ```bash
