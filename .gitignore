@@ -1,0 +1,257 @@
+# ============================
+# Global Settings
+# ============================
+
+# Ignore node_modules and build folders globally
+**/node_modules/
+**/dist/
+**/build/
+**/tmp/
+
+# Ignore environment and secrets files (Angular & .NET)
+**/.env
+**/.env.*.local
+**/env.local
+**/secrets.*
+
+# IDE files
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+**/log/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ============================
+# .NET (API project)
+# ============================
+
+# Build results
+bin/
+obj/
+out/
+
+# User-specific files
+*.rsuser
+*.user
+*.suo
+*.userprefs
+
+# Rider
+.idea/
+*.sln.iml
+
+# Visual Studio
+*.vsp
+*.vspscc
+*.vssscc
+.vs/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish output
+publish/
+*.dbmdl
+*.bak
+*.sql
+*.pdb
+*.cache
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# dotCover
+*.dotCover
+
+# Azure Functions
+local.settings.json
+
+# ============================
+# Angular (UI project)
+# ============================
+
+# Angular build
+UI/dist/
+UI/tmp/
+UI/out-tsc/
+UI/.angular/
+
+# Compiled output
+UI/**/*.js
+UI/**/*.js.map
+
+# Environment
+UI/src/environments/environment*.ts
+
+# Angular Cache
+UI/.angular/cache/
+UI/.npm/
+UI/.yarn/
+
+# Package managers
+UI/package-lock.json
+UI/yarn.lock
+UI/pnpm-lock.yaml
+
+# IDEs inside Angular project
+UI/.idea/
+UI/.vscode/
+
+# Testing
+UI/coverage/
+UI/karma*.js
+UI/test.ts###########################################################
+# Global Settings
+###########################################################
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.*.local
+secrets.*
+*.env
+
+# Backup/Temp files
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# Ignore nested Git repos (from Angular or elsewhere)
+**/.git/
+
+###########################################################
+# .NET (API/)
+###########################################################
+
+# Build results
+API/**/bin/
+API/**/obj/
+API/**/out/
+API/**/publish/
+API/**/Generated\ Files/
+
+# Rider / JetBrains / Visual Studio
+API/.idea/
+API/.vs/
+API/*.suo
+API/*.user
+API/*.userosscache
+API/*.sln.docstates
+
+# ASP.NET Scaffolding
+API/ScaffoldingReadMe.txt
+
+# Database
+API/*.dbmdl
+API/*.bak
+API/*.mdf
+API/*.ldf
+API/*.sql
+
+# Resharper
+API/_ReSharper*/
+API/*.[Rr]e[Ss]harper
+API/*.DotSettings.user
+
+# Azure Functions local settings
+API/local.settings.json
+
+# dotCover
+API/*.dotCover
+
+###########################################################
+# Angular (UI/)
+###########################################################
+
+# Node
+UI/node_modules/
+UI/package-lock.json
+UI/yarn.lock
+UI/pnpm-lock.yaml
+
+# Angular build and cache
+UI/dist/
+UI/.angular/
+UI/.angular/cache/
+UI/.angular/cache/**
+
+# Output
+UI/out-tsc/
+UI/tmp/
+UI/build/
+
+# Environments
+UI/src/environments/environment*.ts
+
+# Testing
+UI/coverage/
+UI/test.ts
+UI/junit.xml
+UI/karma.conf.js
+UI/jest.config.js
+
+# Browsers
+UI/.sass-cache/
+UI/.browserslistrc
+UI/.eslintcache
+UI/.stylelintrc
+
+# IDE settings inside Angular
+UI/.vscode/
+UI/.idea/
+
+###########################################################
+# Optional: GitHub Codespaces / DevContainers
+###########################################################
+
+.devcontainer/
+
+UI/jest.config.js
+UI/junit.xml
+
+# Browsers
+UI/.sass-cache/
+UI/.browserlistrc
+UI/.eslintcache
+
+**/.angular/cache/
+
+# ============================
+# Git & Misc
+# ============================
+
+# Ignore nested .git folders (e.g., if mistakenly created)
+**/.git/
+
+# Ignore backup or temp files
+*.swp
+*.bak
+*.tmp
+*.orig
+
+# GitHub Codespaces / VS DevCon

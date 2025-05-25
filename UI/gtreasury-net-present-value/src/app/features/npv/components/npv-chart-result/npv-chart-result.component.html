@@ -1,0 +1,19 @@
+<div class="chart-type-selector mb-3 d-flex align-items-center gap-2 justify-content-end">
+  <label for="chartType" class="form-label mb-0 me-2 fw-semibold">Select Chart Type:</label>
+  <select id="chartType" class="form-select w-auto" [(ngModel)]="chartType" (change)="onChartTypeChange()">
+    <option value="line">Line</option>
+    <option value="bar">Bar</option>
+  </select>
+</div>
+
+<div *ngIf="results?.length; else noData">
+  <canvas baseChart
+          [data]="chartData"
+          [options]="chartOptions"
+          [type]="chartType">
+  </canvas>
+</div>
+
+<ng-template #noData>
+  <p>No results to display.</p>
+</ng-template>

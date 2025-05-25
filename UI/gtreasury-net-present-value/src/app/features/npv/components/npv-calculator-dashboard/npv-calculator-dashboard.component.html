@@ -1,0 +1,28 @@
+<app-npv-request-form></app-npv-request-form>
+
+<div class="container mt-4">
+  <div class="spinner-container" *ngIf="viewModel.isLoading">
+    <div class="loader"></div>
+    <p>Calculating NPV...</p>
+  </div>
+
+  <div *ngIf="viewModel.error" class="alert alert-danger" role="alert">
+    {{ viewModel.error }}
+  </div>
+
+  <div *ngIf="viewModel.npvResults && viewModel.npvResults.length > 0">
+    <div class="btn-group mb-3" role="group">
+      <button type="button" class="btn btn-outline-primary" [class.active]="getActiveMode('table')"
+        (click)="showTable()">
+        Show Table
+      </button>
+      <button type="button" class="btn btn-outline-primary" [class.active]="getActiveMode('chart')"
+        (click)="showChart()">
+        Show Chart
+      </button>
+    </div>
+
+    <app-npv-table-result *ngIf="viewModel.activeView === 'table'" [results]="viewModel.npvResults"></app-npv-table-result>
+    <app-npv-chart-result *ngIf="viewModel.activeView === 'chart'" [results]="viewModel.npvResults"></app-npv-chart-result>
+  </div>
+</div>

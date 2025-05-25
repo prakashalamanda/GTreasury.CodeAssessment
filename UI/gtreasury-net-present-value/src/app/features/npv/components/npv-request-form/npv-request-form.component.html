@@ -1,0 +1,51 @@
+<div class="container mt-4">
+    <div class="card shadow-sm">
+        <div class="card-header">
+            <h5 class="mb-0">Net Present Value Calculator</h5>
+        </div>
+        <div class="card-body">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+                <div class="mb-3">
+                    <label for="cashFlows" class="form-label">Cash Flows</label>
+                    <div class="input-group mb-2">
+                        <input id="cashFlows" type="number" class="form-control" formControlName="newCashFlow"
+                            placeholder="Enter amount e.g. 1000" />
+                        <button type="button" class="btn btn-outline-secondary" (click)="addCashFlow()">
+                            Add
+                        </button>
+                    </div>
+                    <ul class="list-group">
+                        <li *ngFor="let cash of cashFlowsArray.controls; let i = index"
+                            class="list-group-item d-flex justify-content-between align-items-center bg-light">
+                            {{ cash.value | currency: 'EUR' }}
+                            <button type="button" class="btn btn-sm btn-outline-danger"
+                                (click)="removeCashFlow(i)">Remove</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 mb-3">
+                        <label for="lowerBound" class="form-label">Lower Bound (%)</label>
+                        <input type="number" step="0.01" id="lowerBound" class="form-control"
+                            formControlName="lowerBoundRate" placeholder="e.g. 1" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="upperBound" class="form-label">Upper Bound (%)</label>
+                        <input type="number" step="0.01" id="upperBound" class="form-control"
+                            formControlName="upperBoundRate" placeholder="e.g. 15" />
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <label for="increment" class="form-label">Increment (%)</label>
+                        <input type="number" step="0.01" id="increment" class="form-control"
+                            formControlName="incrementRate" placeholder="e.g. 0.25" />
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary"
+                    [disabled]="form.invalid || cashFlowsArray.length === 0">Calculate NPV</button>
+                <button type="button" class="btn btn-secondary ms-2" (click)="onReset()">Reset</button>
+            </form>
+        </div>
+    </div>
+</div>
