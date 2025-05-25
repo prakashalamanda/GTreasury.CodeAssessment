@@ -47,12 +47,16 @@ I've fixed all the linting issues in the Angular project, except for the ones re
 - [Angular CLI](https://angular.io/cli)
 
 ---
-
+### Run the UI
+```bash
+cd UI/gtreasury-net-present-value
+npm install
+ng serve
+```
 ### Run the API
 
 ```bash
 cd API/GTreasury.NetPresentValue
 dotnet restore
 dotnet run
-
----
+```
